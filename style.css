@@ -7,4 +7,63 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  font-family: monospace;
+  overflow: hidden;
+
+  background-color: rgb(231, 229, 229);
+
+  background-blend-mode: overlay;
+}
+
+.text-container {
+  width: calc(800rem / 16);
+  height: auto;
+  margin: 2rem auto;
+  line-height: 2rem;
+  white-space: pre-wrap;
+  font-size: 1.5rem;
+  border-radius: calc(5rem / 16);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: calc(5rem / 16) 1rem;
+  cursor: none;
+  background-color: white;
+  border: 1px #ccc solid;
+}
+
+.timer {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 10px;
+  width: calc(150rem / 16);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  background-color: black;
+  border-radius: 5px;
+  transition: 0.2s;
+  display: none;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
 }
