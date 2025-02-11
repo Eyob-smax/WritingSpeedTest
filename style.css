@@ -6,6 +6,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  position: relative;
   min-height: 100vh;
 
   display: flex;
@@ -14,6 +15,7 @@ body {
   flex-flow: column nowrap;
   font-family: monospace;
   overflow: hidden;
+  transition: 1s;
 
   background-color: rgb(231, 229, 229);
 
@@ -25,7 +27,8 @@ body {
   height: auto;
   margin: 2rem auto;
   line-height: 2rem;
-  white-space: pre-wrap;
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 1.5rem;
   border-radius: calc(5rem / 16);
   position: relative;
@@ -35,6 +38,8 @@ body {
   cursor: none;
   background-color: white;
   border: 1px #ccc solid;
+
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
 }
 
 .timer {
@@ -56,6 +61,25 @@ button {
   display: none;
 }
 
+.dark-mode {
+  font-size: 2.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.153);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.463);
+  transition: 0.4s;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.dark-mode:hover {
+  background-color: rgb(171, 163, 163);
+}
+
 button:hover {
   background-color: #333;
 }
@@ -66,4 +90,13 @@ button:hover {
 
 .incorrect {
   color: red;
+}
+
+span {
+  min-width: 14px;
+}
+
+.dark {
+  background-color: black;
+  color: white;
 }
