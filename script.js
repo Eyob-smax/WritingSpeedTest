@@ -64,7 +64,7 @@ function timerEnd() {
 function calculateWPM() {
   const adjustedErrors = erros / 3;
   const wordsCount = totalTyped.trim().split(/\s+/).length;
-  const WPM = Math.round((wordsCount / 15) * 60);
+  const WPM = Math.round(wordsCount);
   const adjestedWPM = Math.round(Math.max(WPM - adjustedErrors, 0));
   return adjestedWPM;
 }
