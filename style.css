@@ -23,14 +23,13 @@ body {
 }
 
 .text-container {
-  width: calc(800rem / 16);
+  width: calc(900rem / 16);
   height: auto;
   margin: 2rem auto;
   line-height: 2rem;
   white-space: nowrap;
   overflow: hidden;
   font-size: 1.5rem;
-  /* font-weight: 600; */
   border-radius: calc(5rem / 16);
   position: relative;
   display: flex;
