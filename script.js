@@ -3,12 +3,11 @@ import { words } from "./words.js";
 const randomWord = words;
 
 function shuffleArray(array) {
-  const copiedArray = structuredClone(array);
-  for (let i = copiedArray.length - 1; i > 0; i--) {
+  for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [copiedArray[i], copiedArray[j]] = [copiedArray[j], copiedArray[i]];
+    [array[i], array[j]] = [array[j], array[i]];
   }
-  return copiedArray;
+  return array;
 }
 
 function generatingText() {
@@ -21,7 +20,7 @@ const timer = document.querySelector(".timer");
 const tryAgain = document.querySelector("#try-again");
 const finalScore = document.querySelector(".final-score");
 
-// textContainer.textContent = generatingText();
+textContainer.textContent = generatingText();
 
 let totalTyped = "";
 let currentCharIndex = 0;
@@ -115,6 +114,7 @@ tryAgain.addEventListener("click", () => {
   timerStarted = false;
   timecount = 60;
   textContainer.scrollLeft = 0;
+  shuffleArray(randomWord);
   textValue = generatingText();
 });
 
