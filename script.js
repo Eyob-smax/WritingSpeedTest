@@ -1,11 +1,6 @@
-const randomWord = [];
-let numberOfWords = [110, 120, 140, 160, 180, 200];
-const res = await fetch(
-  "https://random-word-api.herokuapp.com/word?number=" +
-    numberOfWords[Math.floor(Math.random() * numberOfWords.length)]
-);
-const data = await res.json();
-await data.forEach((element) => randomWord.push(element));
+import { words } from "./words.js";
+
+const randomWord = words;
 
 function shuffleArray(array) {
   const copiedArray = structuredClone(array);
@@ -13,7 +8,6 @@ function shuffleArray(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [copiedArray[i], copiedArray[j]] = [copiedArray[j], copiedArray[i]];
   }
-
   return copiedArray;
 }
 
